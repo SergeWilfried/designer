@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { UploadDropzone } from "react-uploader";
 import { Uploader } from "uploader";
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { CompareSlider } from "../components/CompareSlider";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -24,6 +26,7 @@ import { useRouter } from "next/router";
 import { Toaster, toast } from "react-hot-toast";
 import { z } from "zod";
 import { ChangeEvent } from "react";
+import { useForm } from "react-hook-form";
 
 // Configuration for the uploader
 const uploader = Uploader({
@@ -138,6 +141,16 @@ const Home: NextPage = () => {
   const handleSubmitEmail = (values: Schema) => {
     signIn("email", { email: values.email });
   };
+
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm<z.infer<typeof Schema>>({
+    resolver: zodResolver(Schema),
+    defaultValues: {},
+  });
 
 
   function handleChange(event: any): void {
@@ -304,7 +317,7 @@ const Home: NextPage = () => {
                     <div className="w-full mt-6">
                   <form
                     className="flex flex-col w-full space-y-4"
-                    onSubmit={handleSubmitEmail}
+                    onSubmit={handleSubmit(handleSubmitEmail)}
                   >
 
 <label>

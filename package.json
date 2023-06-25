@@ -33,6 +33,7 @@
     "stripe": "^11.15.0",
     "swr": "^2.1.0",
     "uploader": "^3.9.0",
+    "@hookform/resolvers": "^3.0.0",
     "vercel": "^28.18.0",
     "zod": "3.19.1"
   },
