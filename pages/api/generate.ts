@@ -21,7 +21,7 @@ export default async function handler(
   req: ExtendedNextApiRequest,
   res: NextApiResponse<GenerateResponseData | string>
 ) {
-  // Check if user is logged in
+  // Check if uer is logged in
   const session = await getServerSession(req, res, authOptions);
   if (!session || !session.user) {
     return res.status(500).json("Login to upload.");
