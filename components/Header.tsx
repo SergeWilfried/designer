@@ -36,7 +36,7 @@ export default function Header({
           >
             <div>Acheter des Credits</div>
             <div className="text-blue-500 bg-blue-200 rounded-full px-2 text-xs flex justify-center items-center font-bold">
-              New
+              Nouveau
             </div>
           </Link>
           {photo ? (
