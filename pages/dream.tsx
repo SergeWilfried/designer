@@ -140,7 +140,7 @@ const Home: NextPage = () => {
   };
 
 
-  function handleChange(event: ChangeEvent<HTMLInputElement>): void {
+  function handleChange(event: any): void {
     throw new Error("Function not implemented.");
   }
 
