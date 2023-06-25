@@ -14,7 +14,7 @@ export default function Pricing() {
   return (
     <div className="flex mx-auto max-w-7xl overflow-visible flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Buy RoomGPT Credits</title>
+        <title>Acheter des crédits Designer</title>
       </Head>
       <Script src="https://js.stripe.com/v3/pricing-table.js" />
       <Script src="https://cdn.paritydeals.com/banner.js" />
@@ -26,7 +26,7 @@ export default function Pricing() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Buy RoomGPT Credits
+            Acheter des crédits
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Pricing() {
             {data?.remainingGenerations}{" "}
             {data?.remainingGenerations > 1 ? "credits" : "credit"}
           </span>
-          . Purchase more below.
+          . Recharger votre compte
         </p>
       </main>
       <div className="w-full">
@@ -52,7 +52,7 @@ export default function Pricing() {
       </div>
       <div className="mt-10 text-center">
         <h4 className="flex-none leading-6 mt-2 text-2xl font-bold tracking-tight text-white sm:text-5xl">
-          What’s included
+          Notre offre
         </h4>
       </div>
       <ul
@@ -72,7 +72,7 @@ export default function Pricing() {
               clip-rule="evenodd"
             />
           </svg>
-          Save your generated rooms
+          Sauvegarder vos images
         </li>
 
         <li className="flex gap-x-3">
@@ -88,7 +88,7 @@ export default function Pricing() {
               clip-rule="evenodd"
             />
           </svg>
-          Get more room styles and room types
+          Accéss a plusieurs styles et types de chambres
         </li>
 
         <li className="flex gap-x-3">
@@ -104,7 +104,7 @@ export default function Pricing() {
               clip-rule="evenodd"
             />
           </svg>
-          Premium support by email
+          Assistance Premium Via WhatsApp
         </li>
 
         <li className="flex gap-x-3">
@@ -120,7 +120,7 @@ export default function Pricing() {
               clip-rule="evenodd"
             />
           </svg>
-          Ability to request features
+          Possibilité de demander de nouvelles fonctionnalités
         </li>
         <li className="flex gap-x-3">
           <svg
@@ -135,7 +135,7 @@ export default function Pricing() {
               clip-rule="evenodd"
             />
           </svg>
-          Commercial usage of photos
+          Usage commercial des images génerées
         </li>
         <li className="flex gap-x-3">
           <svg
@@ -150,12 +150,12 @@ export default function Pricing() {
               clip-rule="evenodd"
             />
           </svg>
-          Early access to new features
+          Accès anticipé aux nouvelles fonctionnalités
         </li>
       </ul>
       <p className="text-gray-400 mb-5">
-        Interested in team pricing or have any pricing questions? Email{" "}
-        <span className="text-gray-300">hassan@roomgpt.io</span>
+      Vous êtes intéressé par les tarifs d'équipe ou vous avez des questions sur les tarifs ? Envoyez un message {" "}
+        <span className="text-gray-300">+22656284997</span>
       </p>
       <Footer />
     </div>
