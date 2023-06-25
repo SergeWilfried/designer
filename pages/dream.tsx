@@ -67,7 +67,7 @@ const Home: NextPage = () => {
     },
     onValidate: async (file: File): Promise<undefined | string> => {
       return data.remainingGenerations === 0
-        ? `No more credits left. Buy more above.`
+        ? `Il ne reste plus de crédits. Approvisionnez votre compte ici`
         : undefined;
     },
   };
@@ -119,7 +119,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if (router.query.success === "true") {
-      toast.success("Payment successful!");
+      toast.success("Paiement réussi!");
     }
   }, [router.query.success]);
 
@@ -138,9 +138,9 @@ const Home: NextPage = () => {
             href="/buy-credits"
             className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 hover:scale-105 transition"
           >
-            Pricing is now available.{" "}
-            <span className="font-semibold text-gray-200">Click here</span> to
-            buy credits!
+            Les prix sont maintenant disponibles.{" "}
+            <span className="font-semibold text-gray-200">Cliquez ici</span> pour
+            acheter plus de crédits!
           </Link>
         ) : (
           <a
@@ -149,30 +149,29 @@ const Home: NextPage = () => {
             rel="noopener noreferrer"
             className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
           >
-            Over{" "}
-            <span className="font-semibold text-gray-200">1 million users</span>{" "}
-            have used roomGPT so far
-          </a>
+            Plus de {" "}
+            <span className="font-semibold text-gray-200">500 utilisateurs</span>{" "}
+            ont utilisé Designer jusqu'à présent          </a>
         )}
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+          Generer votre interieur de<span className="text-blue-600">rêve</span>
         </h1>
         {status === "authenticated" && data && !restoredImage && (
           <p className="text-gray-400">
-            You have{" "}
+            Vous avez{" "}
             <span className="font-semibold text-gray-300">
               {data.remainingGenerations}{" "}
               {data?.remainingGenerations > 1 ? "credits" : "credit"}
             </span>{" "}
-            left.{" "}
+            restant.{" "}
             {data.remainingGenerations < 2 && (
               <span>
-                Buy more credits{" "}
+                Acheter plus de credits{" "}
                 <Link
                   href="/buy-credits"
                   className="font-semibold text-gray-300 underline underline-offset-2 hover:text-gray-200 transition"
                 >
-                  here
+                  ici
                 </Link>
                 .
               </span>
@@ -229,7 +228,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room theme.
+                        Choisissez le theme de votre pièce.
                       </p>
                     </div>
                     <DropDown
@@ -248,7 +247,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room type.
+                      Choisissez le type de votre pièce.
                       </p>
                     </div>
                     <DropDown
@@ -267,7 +266,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Upload a picture of your room.
+                        Télécharger une photo de votre pièce.
                       </p>
                     </div>
                   </div>
@@ -277,9 +276,9 @@ const Home: NextPage = () => {
                 !originalPhoto && (
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
                     <div className="max-w-xl text-gray-300">
-                      Sign in below with Google to create a free account and
-                      redesign your room today. You will get 3 generations for
-                      free.
+                      Connectez-vous ci-dessous pour créer un compte gratuit et
+                      redessinez votre piéce de rêve dès aujourd'hui. Vous obtiendrez 3 générations
+                      gratuitement.
                     </div>
                     <button
                       onClick={() => signIn("google")}
@@ -291,7 +290,7 @@ const Home: NextPage = () => {
                         height={20}
                         alt="google's logo"
                       />
-                      <span>Sign in with Google</span>
+                      <span>Se connecter</span>
                     </button>
                   </div>
                 )
@@ -308,7 +307,7 @@ const Home: NextPage = () => {
               {restoredImage && originalPhoto && !sideBySide && (
                 <div className="flex sm:space-x-4 sm:flex-row flex-col">
                   <div>
-                    <h2 className="mb-1 font-medium text-lg">Original Room</h2>
+                    <h2 className="mb-1 font-medium text-lg">Pièce Originale</h2>
                     <Image
                       alt="original photo"
                       src={originalPhoto}
@@ -318,7 +317,7 @@ const Home: NextPage = () => {
                     />
                   </div>
                   <div className="sm:mt-0 mt-8">
-                    <h2 className="mb-1 font-medium text-lg">Generated Room</h2>
+                    <h2 className="mb-1 font-medium text-lg">Piéce générée</h2>
                     <a href={restoredImage} target="_blank" rel="noreferrer">
                       <Image
                         alt="restored photo"
@@ -348,8 +347,8 @@ const Home: NextPage = () => {
                   role="alert"
                 >
                   <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-                    Please try again later.
-                  </div>
+                  Veuillez réessayer plus tard.
+                                    </div>
                   <div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
                     {error}
                   </div>
@@ -366,7 +365,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-blue-500 rounded-full text-white font-medium px-4 py-2 mt-8 hover:bg-blue-500/80 transition"
                   >
-                    Generate New Room
+                    Générer une nouvelle pièce
                   </button>
                 )}
                 {restoredLoaded && (
@@ -379,7 +378,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-white rounded-full text-black border font-medium px-4 py-2 mt-8 hover:bg-gray-100 transition"
                   >
-                    Download Generated Room
+                    Télécharger le design générée
                   </button>
                 )}
               </div>
