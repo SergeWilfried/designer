@@ -31,7 +31,7 @@ export default function Pricing() {
           </div>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-500 mb-10">
-            Il vous reste{" "}
+          You currently have{" "}
           <span className="font-semibold text-gray-400">
             {data?.remainingGenerations}{" "}
             {data?.remainingGenerations > 1 ? "credits" : "credit"}
@@ -43,10 +43,10 @@ export default function Pricing() {
         {session?.user?.email && (
           // @ts-ignore
           <stripe-pricing-table
-            pricing-table-id="prctbl_1MobnNK4W9ejG97elHjeFCEq"
-            publishable-key="pk_live_51HGpOvK4W9ejG97eYSm02d1hgagCOAAcKQCtH7258w6fA8wxo2PRv2xs2wSUG2xkV2YLBc0h3HxKITTFeJGtWai500o6bqGFHF"
-            client-reference-id={session.user.email}
-            customer-email={session.user.email}
+          pricing-table-id="prctbl_1NN07OBlZZ7GUQZHaSqntpKe"
+          publishable-key="pk_test_51NMzwGBlZZ7GUQZHsBRrvVBsm8MWtCXpLH12nMxb1KlY3xoS5wvP1kE6MzMePZjWj5gXZ4XSIFX5yIy7RMUpZZGG001g72r7oz"
+          client-reference-id={session.user.email}
+          customer-email={session.user.email}
           />
         )}
       </div>
