@@ -33,6 +33,12 @@ const uploader = Uploader({
     : "free",
 });
 
+const Schema = z.object({
+  email: z.string().email(),
+});
+
+type Schema = z.infer<typeof Schema>;
+
 const Home: NextPage = () => {
   const [originalPhoto, setOriginalPhoto] = useState<string | null>(null);
   const [restoredImage, setRestoredImage] = useState<string | null>(null);
