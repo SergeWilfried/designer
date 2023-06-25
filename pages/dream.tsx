@@ -22,6 +22,8 @@ import { Rings } from "react-loader-spinner";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Toaster, toast } from "react-hot-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 // Configuration for the uploader
 const uploader = Uploader({
@@ -122,6 +124,15 @@ const Home: NextPage = () => {
       toast.success("Paiement réussi!");
     }
   }, [router.query.success]);
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm<z.infer<typeof Schema>>({
+    resolver: zodResolver(Schema),
+    defaultValues: {},
+  });
 
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
