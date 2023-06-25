@@ -23,6 +23,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Toaster, toast } from "react-hot-toast";
 import { z } from "zod";
+import { ChangeEvent } from "react";
 
 // Configuration for the uploader
 const uploader = Uploader({
