@@ -28,7 +28,7 @@ export default function Header({
             href="/dashboard"
             className="border-r border-gray-300 pr-4 flex space-x-2 hover:text-blue-400 transition"
           >
-            <div>Dashboard</div>
+            <div>Acceuil</div>
           </Link>
           <Link
             href="/buy-credits"
