@@ -141,6 +141,11 @@ const Home: NextPage = () => {
     defaultValues: {},
   });
 
+  const handleSubmitEmail = (values: Schema) => {
+    signIn("email", { email: values.email });
+  };
+
+  
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
