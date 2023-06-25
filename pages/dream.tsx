@@ -5,8 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { UploadDropzone } from "react-uploader";
 import { Uploader } from "uploader";
-import { zodResolver } from "@hookform/resolvers/zod";
-
 import { CompareSlider } from "../components/CompareSlider";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -24,9 +22,6 @@ import { Rings } from "react-loader-spinner";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Toaster, toast } from "react-hot-toast";
-import { z } from "zod";
-import { ChangeEvent } from "react";
-import { useForm } from "react-hook-form";
 
 // Configuration for the uploader
 const uploader = Uploader({
@@ -34,16 +29,6 @@ const uploader = Uploader({
     ? process.env.NEXT_PUBLIC_UPLOAD_API_KEY
     : "free",
 });
-type Fields = {
-  email: string;
-  password: string;
-};
-
-const Schema = z.object({
-  email: z.string().email(),
-});
-
-type Schema = z.infer<typeof Schema>;
 
 const Home: NextPage = () => {
   const [originalPhoto, setOriginalPhoto] = useState<string | null>(null);
@@ -137,25 +122,6 @@ const Home: NextPage = () => {
       toast.success("Paiement réussi!");
     }
   }, [router.query.success]);
-
-  const handleSubmitEmail = (values: Schema) => {
-    signIn("email", { email: values.email });
-  };
-
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState: { errors, isValid },
-  } = useForm<z.infer<typeof Schema>>({
-    resolver: zodResolver(Schema),
-    defaultValues: {},
-  });
-
-
-  function handleChange(event: any): void {
-    throw new Error("Function not implemented.");
-  }
 
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
@@ -314,17 +280,6 @@ const Home: NextPage = () => {
                       créer l'interieur de rêve pour votre piéce dès aujourd'hui. Vous obtiendrez 3 générations
                       gratuitement.
                     </div>
-                    <div className="w-full mt-6">
-                  <form
-                    className="flex flex-col w-full space-y-4"
-                    onSubmit={handleSubmit(handleSubmitEmail)}
-                  >
-
-<label>
-Email:
-          <input type="text" value='email' onChange={handleChange} />
-        </label>
-
                     <button
                       onClick={() => signIn("email")}
                       className="bg-gray-200 text-black font-semibold py-3 px-6 rounded-2xl flex items-center space-x-2"
@@ -332,9 +287,6 @@ Email:
                     
                       <span>Se connecter</span>
                     </button>
-                  </form>
-                </div>
-                    
                   </div>
                 )
               )}
