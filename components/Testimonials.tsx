@@ -72,16 +72,16 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      aria-label="What our customers are saying"
+      aria-label="Ce que disent nos clients"
       className="py-10"
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7">
         <div className="mx-auto md:text-center">
           <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-gray-300 sm:text-6xl">
-            Loved by many worldwide.
+          Aimé par de nombreuses personnes dans le monde entier.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
-            See what our over 1 million users are saying about the product.
+          Voyez ce que plus 500 utilisateurs disent de ce produit.
           </p>
         </div>
         <ul
