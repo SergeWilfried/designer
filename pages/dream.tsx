@@ -154,7 +154,7 @@ const Home: NextPage = () => {
             ont utilisé Designer jusqu'à présent          </a>
         )}
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generer votre interieur de<span className="text-blue-600">rêve</span>
+          Créer votre interieur de <span className="text-blue-600">rêve</span>
         </h1>
         {status === "authenticated" && data && !restoredImage && (
           <p className="text-gray-400">
@@ -277,19 +277,14 @@ const Home: NextPage = () => {
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
                     <div className="max-w-xl text-gray-300">
                       Connectez-vous ci-dessous pour créer un compte gratuit et
-                      redessinez votre piéce de rêve dès aujourd'hui. Vous obtiendrez 3 générations
+                      créer l'interieur de rêve pour votre piéce dès aujourd'hui. Vous obtiendrez 3 générations
                       gratuitement.
                     </div>
                     <button
                       onClick={() => signIn("google")}
                       className="bg-gray-200 text-black font-semibold py-3 px-6 rounded-2xl flex items-center space-x-2"
                     >
-                      <Image
-                        src="/google.png"
-                        width={20}
-                        height={20}
-                        alt="google's logo"
-                      />
+                    
                       <span>Se connecter</span>
                     </button>
                   </div>
