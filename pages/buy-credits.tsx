@@ -155,7 +155,7 @@ export default function Pricing() {
       </ul>
       <p className="text-gray-400 mb-5">
       Vous êtes intéressé par les tarifs d'équipe ou vous avez des questions sur les tarifs ? Envoyez un message {" "}
-        <span className="text-gray-300">+22656284997</span>
+      <span className="text-gray-300">info@mongriot.com</span>
       </p>
       <Footer />
     </div>
