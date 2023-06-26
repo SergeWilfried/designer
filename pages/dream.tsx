@@ -161,7 +161,7 @@ const Home: NextPage = () => {
             href="/buy-credits"
             className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 hover:scale-105 transition"
           >
-            Les prix sont maintenant disponibles.{" "}
+            Les forfaits sont maintenant disponibles.{" "}
             <span className="font-semibold text-gray-200">Cliquez ici</span> pour
             acheter plus de crédits!
           </Link>
@@ -206,8 +206,8 @@ const Home: NextPage = () => {
             <motion.div className="flex justify-between items-center w-full flex-col mt-4">
               {restoredImage && (
                 <div>
-                  Here's your remodeled <b>{room.toLowerCase()}</b> in the{" "}
-                  <b>{theme.toLowerCase()}</b> theme!{" "}
+                  Votre piéce redesigné <b>{room.toLowerCase()}</b> dans le{" "}theme!{" "}
+                  <b>{theme.toLowerCase()}</b>
                 </div>
               )}
               <div
