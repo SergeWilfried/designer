@@ -1,51 +1,40 @@
 export type themeType =
-  | "Moderne"
-  | "Vintage" 
-  | "Minimaliste"
-  | "Professionnel"
+  | "Modern"
+  | "Vintage"
+  | "Minimalist"
+  | "Professional"
   | "Tropical"
-  | "Industriel"
-  | "Néoclassique" ;
+  | "Industrial"
+  | "Neoclassic";
 
 export type roomType =
-  | "Salon"
-  | "Salle à manger"
-  | "Chambre à coucher"
-  | "Salle de bain" 
-  | "Salle d'attente" 
-  | "Bureau" 
-  | "Cuisine" 
-  | "Salle à manger"
-  | "Cuisine" 
-  | "Salle de bain" 
-  | "Cuisine"
-  | "Patio extérieur"
-  | "Sous-sol"
-  | "Salle de jeux";
+  | "Living Room"
+  | "Dining Room"
+  | "Bedroom"
+  | "Bathroom"
+  | "Office"
+  | "Kitchen"
+  | "Basement"
+  | "Outdoor Patio"
+  | "Gaming Room";
 
-  
 export const themes: themeType[] = [
-  "Moderne",
-  "Minimaliste",
-  "Professionnel",
+  "Modern",
+  "Minimalist",
+  "Professional",
   "Tropical",
   "Vintage",
-  "Industriel",
-  "Néoclassique",
+  "Industrial",
+  "Neoclassic",
 ];
 export const rooms: roomType[] = [
-  "Salon",
-  "Salle à manger",
-  "Chambre à coucher",
-  "Salle de bain" ,
-  "Salle d'attente", 
-  "Bureau", 
-  "Cuisine" ,
-  "Salle à manger",
-  "Cuisine" ,
-  "Salle de bain" ,
-  "Cuisine",
-  "Patio extérieur",
-  "Sous-sol",
-  "Salle de jeux"
+  "Living Room",
+  "Dining Room",
+  "Office",
+  "Bedroom",
+  "Bathroom",
+  "Basement",
+  "Kitchen",
+  "Gaming Room",
+  "Outdoor Patio",
 ];
