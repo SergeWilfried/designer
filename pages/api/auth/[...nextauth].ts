@@ -3,7 +3,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "../../../lib/prismadb";
 import EmailProvider from "next-auth/providers/email";
-import { CustomsendVerificationRequest } from "./signinemail";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -17,10 +16,7 @@ export const authOptions: NextAuthOptions = {
           pass: process.env.EMAIL_SERVER_PASSWORD
         }
       },
-      from: process.env.EMAIL_FROM,
-      sendVerificationRequest({ identifier, url, provider }) {
-        CustomsendVerificationRequest({ identifier, url, provider })
-      },
+      from: process.env.EMAIL_FROM
     }),
   ],
 };
