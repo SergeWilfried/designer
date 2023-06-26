@@ -31,7 +31,7 @@ export default function Pricing() {
           </div>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-500 mb-10">
-          Il vous reste{" "}
+          Vous avez{" "}
           <span className="font-semibold text-gray-400">
             {data?.remainingGenerations}{" "}
             {data?.remainingGenerations > 1 ? "credits" : "credit"}
