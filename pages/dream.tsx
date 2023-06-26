@@ -142,6 +142,7 @@ const Home: NextPage = () => {
   });
 
   const handleSubmitEmail = (values: Schema) => {
+    setLoading(true);
     signIn("email", { email: values.email });
   };
 
