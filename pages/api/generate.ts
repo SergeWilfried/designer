@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "./auth/[...nextauth]";
 import prisma from "../../lib/prismadb";
+import { getRoomTheme, getRoomType, roomType, roomTypeFr, themeType, themeTypeFr } from "../../utils/dropdownTypes";
 
 export type GenerateResponseData = {
   original: string | null;
@@ -12,8 +13,8 @@ export type GenerateResponseData = {
 interface ExtendedNextApiRequest extends NextApiRequest {
   body: {
     imageUrl: string;
-    theme: string;
-    room: string;
+    theme: themeTypeFr;
+    room: roomTypeFr;
   };
 }
 
@@ -56,10 +57,12 @@ export default async function handler(
 
   try {
     const { imageUrl, theme, room } = req.body;
+    const translatedRoomType: roomType = getRoomType(room);
+    const translatedRoomTheme: themeType = getRoomTheme(theme);
     const prompt =
-      room === "Gaming Room"
+    translatedRoomType === "Gaming Room"
         ? "a video gaming room"
-        : `a ${theme.toLowerCase()} ${room.toLowerCase()}`;
+        : `a ${translatedRoomTheme.toLowerCase()} ${translatedRoomType.toLowerCase()}`;
 
     // POST request to Replicate to start the image restoration generation process
     let startResponse = await fetch(
@@ -157,3 +160,5 @@ export default async function handler(
     res.status(500).json("Failed to restore image");
   }
 }
+
+
