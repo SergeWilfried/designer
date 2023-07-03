@@ -15,7 +15,7 @@ export type roomType =
   | "Bathroom"
   | "Office"
   | "Kitchen"
-  | "Arabian Majlis"
+  | "Arabic Majlis"
   | "RoofTop"
   | "Shop"
   | "Store"
@@ -41,7 +41,7 @@ export const rooms: roomType[] = [
   "Bedroom",
   "Bathroom",
   "Basement",
-  "Arabian Majlis",
+  "Arabic Majlis",
   "RoofTop",
   "Restaurant",
   "Shop",
@@ -57,6 +57,7 @@ export type themeTypeFr =
   | "Minimaliste"
   | "Professionnel"
   | "Tropical"
+  | "Tribal"
   | "Industriel"
   | "Néoclassique";
 
@@ -70,6 +71,7 @@ export type roomTypeFr =
   | "Sous-sol"
   | "RoofTop"
   | "Restaurant"
+  | "Majlis Arabe"
   | "Boutique"
   | "Magasin"
   | "Cuisine"
@@ -79,6 +81,7 @@ export type roomTypeFr =
 export const themesFr: themeTypeFr[] = [
   "Moderne",
   "Minimaliste",
+  "Tribal",
   "Professionnel",
   "Tropical",
   "Vintage",
@@ -91,9 +94,11 @@ export const roomsFr: roomTypeFr[] = [
   "Bureau",
   "Chambre",
   "Salle de bain",
+  "Majlis Arabe",
   "Sous-sol",
   "RoofTop",
   "Restaurant",
+  "Arabe"
   "Boutique",
   "Magasin",
   "Cuisine",
