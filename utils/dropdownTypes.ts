@@ -14,7 +14,11 @@ export type roomType =
   | "Bathroom"
   | "Office"
   | "Kitchen"
+  | "RoofTop"
+  | "Shop"
+  | "Store"
   | "Basement"
+  | "Restaurant"
   | "Outdoor Patio"
   | "Gaming Room";
 
@@ -34,6 +38,10 @@ export const rooms: roomType[] = [
   "Bedroom",
   "Bathroom",
   "Basement",
+  "RoofTop",
+  "Restaurant",
+  "Shop",
+  "Store",
   "Kitchen",
   "Gaming Room",
   "Outdoor Patio",
