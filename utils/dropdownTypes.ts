@@ -46,3 +46,54 @@ export const rooms: roomType[] = [
   "Gaming Room",
   "Outdoor Patio",
 ];
+
+export type themeTypeFr =
+  | "Moderne"
+  | "Vintage"
+  | "Minimaliste"
+  | "Professionnel"
+  | "Tropical"
+  | "Industriel"
+  | "Néoclassique";
+
+export type roomTypeFr =
+  | "Living Room"
+  | "Salon"
+  | "Salle à manger"
+  | "Bureau"
+  | "Chambre"
+  | "Salle de bain"
+  | "Sous-sol"
+  | "RoofTop"
+  | "Restaurant"
+  | "Boutique"
+  | "Magasin"
+  | "Cuisine"
+  | "Salle de jeux"
+  | "Patio extérieur";
+
+export const themesFr: themeTypeFr[] = [
+  "Moderne",
+  "Minimaliste",
+  "Professionnel",
+  "Tropical",
+  "Vintage",
+  "Industriel",
+  "Néoclassique",
+];
+export const roomsFr: roomTypeFr[] = [
+  "Salon",
+  "Salle à manger",
+  "Bureau",
+  "Chambre",
+  "Salle de bain",
+  "Sous-sol",
+  "RoofTop",
+  "Restaurant",
+  "Boutique",
+  "Magasin",
+  "Cuisine",
+  "Salle de jeux",
+  "Patio extérieur",
+];
+
