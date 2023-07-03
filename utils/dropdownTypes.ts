@@ -5,6 +5,7 @@ export type themeType =
   | "Professional"
   | "Tropical"
   | "Industrial"
+  | "Tribal"
   | "Neoclassic";
 
 export type roomType =
@@ -16,6 +17,7 @@ export type roomType =
   | "Kitchen"
   | "RoofTop"
   | "Shop"
+  | "Arabic Majlis"
   | "Store"
   | "Basement"
   | "Restaurant"
@@ -27,6 +29,7 @@ export const themes: themeType[] = [
   "Minimalist",
   "Professional",
   "Tropical",
+  "Tribal",
   "Vintage",
   "Industrial",
   "Neoclassic",
@@ -36,6 +39,7 @@ export const rooms: roomType[] = [
   "Dining Room",
   "Office",
   "Bedroom",
+  "Arabic Majlis",
   "Bathroom",
   "Basement",
   "RoofTop",
@@ -52,6 +56,7 @@ export type themeTypeFr =
   | "Vintage"
   | "Minimaliste"
   | "Professionnel"
+  | "Tribal"
   | "Tropical"
   | "Industriel"
   | "Néoclassique";
@@ -65,6 +70,7 @@ export type roomTypeFr =
   | "Salle de bain"
   | "Sous-sol"
   | "RoofTop"
+  | "Majlis Arabe"
   | "Restaurant"
   | "Boutique"
   | "Magasin"
@@ -77,6 +83,7 @@ export const themesFr: themeTypeFr[] = [
   "Minimaliste",
   "Professionnel",
   "Tropical",
+  "Tribal",
   "Vintage",
   "Industriel",
   "Néoclassique",
@@ -87,6 +94,7 @@ export const roomsFr: roomTypeFr[] = [
   "Bureau",
   "Chambre",
   "Salle de bain",
+  "Majlis Arabe",
   "Sous-sol",
   "RoofTop",
   "Restaurant",
@@ -113,6 +121,9 @@ export function getRoomType(room: roomTypeFr): roomType {
       break;
     case "Chambre":
       response = "Bedroom";
+      break;
+    case "Majlis Arabe":
+      response = "Arabic Majlis";
       break;
     case "Salle de bain":
       response = "Bathroom";
@@ -157,6 +168,9 @@ export function getRoomTheme(theme: themeTypeFr): themeType {
       break;
     case "Vintage":
       response = "Vintage";
+      break;
+    case "Tribal":
+      response = "Tribal";
       break;
     case "Minimaliste":
       response = "Minimalist";

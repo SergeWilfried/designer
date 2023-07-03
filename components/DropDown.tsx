@@ -5,16 +5,16 @@ import {
   ChevronUpIcon,
 } from "@heroicons/react/20/solid";
 import { Fragment } from "react";
-import { roomType, themeType } from "../utils/dropdownTypes";
+import { roomTypeFr,themeTypeFr } from "../utils/dropdownTypes";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 interface DropDownProps {
-  theme: themeType | roomType;
-  setTheme: (theme: themeType | roomType) => void;
-  themes: themeType[] | roomType[];
+  theme: themeTypeFr | roomTypeFr;
+  setTheme: (theme: themeTypeFr | roomTypeFr) => void;
+  themes: themeTypeFr[] | roomTypeFr[];
 }
 
 export default function DropDown({ theme, setTheme, themes }: DropDownProps) {

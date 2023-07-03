@@ -14,7 +14,7 @@ import Toggle from "../components/Toggle";
 import appendNewToName from "../utils/appendNewToName";
 import downloadPhoto from "../utils/downloadPhoto";
 import DropDown from "../components/DropDown";
-import { roomType, rooms, themeType, themes } from "../utils/dropdownTypes";
+import { roomTypeFr, roomsFr, themeTypeFr, themesFr } from "../utils/dropdownTypes";
 import { GenerateResponseData } from "./api/generate";
 import { useSession, signIn } from "next-auth/react";
 import useSWR from "swr";
@@ -47,8 +47,8 @@ const Home: NextPage = () => {
   const [sideBySide, setSideBySide] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [photoName, setPhotoName] = useState<string | null>(null);
-  const [theme, setTheme] = useState<themeType>("Modern");
-  const [room, setRoom] = useState<roomType>("Living Room");
+  const [theme, setTheme] = useState<themeTypeFr>("Moderne");
+  const [room, setRoom] = useState<roomTypeFr>("Salon");
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, mutate } = useSWR("/api/remaining", fetcher);
@@ -259,7 +259,7 @@ const Home: NextPage = () => {
                       theme={theme}
                       // @ts-ignore
                       setTheme={(newTheme) => setTheme(newTheme)}
-                      themes={themes}
+                      themes={themesFr}
                     />
                   </div>
                   <div className="space-y-4 w-full max-w-sm">
@@ -278,7 +278,7 @@ const Home: NextPage = () => {
                       theme={room}
                       // @ts-ignore
                       setTheme={(newRoom) => setRoom(newRoom)}
-                      themes={rooms}
+                      themes={roomsFr}
                     />
                   </div>
                   <div className="mt-4 w-full max-w-sm">
