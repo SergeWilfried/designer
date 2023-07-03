@@ -74,7 +74,6 @@ export type roomTypeFr =
   | "Salle de bain"
   | "Sous-sol"
   | "RoofTop"
-  | "Majlis Arabe"
   | "Restaurant"
   | "Majlis Arabe"
   | "Boutique"
@@ -104,7 +103,6 @@ export const roomsFr: roomTypeFr[] = [
   "Sous-sol",
   "RoofTop",
   "Restaurant",
-  "Arabe"
   "Boutique",
   "Magasin",
   "Cuisine",
